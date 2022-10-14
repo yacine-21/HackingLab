@@ -4,7 +4,7 @@ export const sendDataToServer = async (data, URL) => {
 	console.log("====================================");
 
 	if (veriyfData(data)) {
-		const url = "hacking-lab-back.vercel.app/" + URL;
+		const url = "hacking-lab-back.vercel.app" + URL;
 
 		const response = await fetch(url, {
 			method: "POST",
