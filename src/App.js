@@ -1,11 +1,18 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FinalStep from "./components/FinalStep";
+import Main from "./components/Main";
+import SecondStep from "./components/SecondStep";
 
 function App() {
 	return (
-		<div className='App'>
-			<h1 className='text-3xl font-bold underline'>Hello world!</h1>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Main />} />
+				<Route path='secondStep' element={<SecondStep />} />
+				<Route path='finalStep' element={<FinalStep />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
